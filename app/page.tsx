@@ -223,9 +223,11 @@ function BlogContent() {
                 </h2>
                 <div className="flex flex-col items-center text-center">
                   {/* アバターの背景をちょっとトーンを落としたお砂場ベージュにして白背景に映えさせてみた！ */}
-                  <div className="w-20 h-20 rounded-full bg-[#fdfbf7] border border-gray-100 shadow-sm flex items-center justify-center text-2xl mb-4">
-                    🌱
-                  </div>
+                  <img
+                    src="/self-icon.png"
+                    alt="ユジンのアイコン"
+                    className="w-20 h-20 rounded-full object-cover border border-gray-100 shadow-sm mb-4"
+                  />
                   <p className="font-bold text-gray-800">ユジン</p>
 
                   <div className="text-xs text-gray-600 mt-3 leading-relaxed text-left space-y-1">
