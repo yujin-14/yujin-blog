@@ -1,26 +1,19 @@
 @import "tailwindcss";
+/* ▼ これ！Tailwind v4ではCSSの中でプラグインを読み込むよ！これだけで全要素が息を吹き返す！🚀 */
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ▼ 今まで tailwind.config.js に書いてたカラー設定もCSSの中に書くのがv4流！💅 */
+@theme {
+  --color-main-beige: #f5deb3;
+  --color-gray-850: #1e293b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ==========================================
+   ここから下は、もし元から入ってたCSSや
+   自分で追加したオシャレ設定（背景色とか）があれば
+   そのまま残したり、自由に書いてね！
+   ========================================== */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdfbf7;
 }
