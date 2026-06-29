@@ -1,8 +1,8 @@
 import "./globals.css";
 import Link from "next/link";
 import { Noto_Serif_JP } from "next/font/google";
-// 💡 ①【変更】インポートするものを「GoogleTagManager」に変えるよ！
-import { GoogleTagManager } from "@next/third-parties/google";
+// 💡 ①【追記】Next.js公式のアナリティクス機能をインポートするよ！
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const notoSerif = Noto_Serif_JP({
   weight: "700",
@@ -45,10 +45,6 @@ export default async function RootLayout({
 
   return (
     <html lang="ja">
-      {/* 💡 ②【重要】ここにGTMから発行された「GTM-XXXXXXX」っていうコンテナIDを入れる！ */}
-      {/* Next.js公式のルールで、<html>の直後（<body>の前）に入れるのが一番綺麗に動くよ👌 */}
-      <GoogleTagManager gtmId="G-4V61HJX7LJ" />
-
       <body className="bg-[#fdfbf7] text-gray-800 antialiased">
         <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
           <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between w-full">
@@ -81,6 +77,9 @@ export default async function RootLayout({
           © 2026 日常の散文. All Rights Reserved.
         </footer>
       </body>
+      {/* 💡 ②【追記】ここにさっきゲットした「G-から始まる測定ID」を直接貼り付ける！ */}
+      {/* ※このIDは公開されても問題ないものだから、ここに直接書いちゃって100%安全だよ！👌 */}
+      <GoogleAnalytics gaId="G-4V61HJX7LJ" />
     </html>
   );
 }
