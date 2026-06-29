@@ -47,7 +47,7 @@ export default async function RootLayout({
     <html lang="ja">
       {/* 💡 ②【重要】ここにGTMから発行された「GTM-XXXXXXX」っていうコンテナIDを入れる！ */}
       {/* Next.js公式のルールで、<html>の直後（<body>の前）に入れるのが一番綺麗に動くよ👌 */}
-      <GoogleTagManager gtmId="GTM-NSMF4KV3" />
+      <GoogleTagManager gtmId="G-4V61HJX7LJ" />
 
       <body className="bg-[#fdfbf7] text-gray-800 antialiased">
         <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
