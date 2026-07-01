@@ -13,6 +13,10 @@ const notoSerif = Noto_Serif_JP({
 export const metadata = {
   title: "日常の散文",
   description: "シンプルモダンな個人ブログ",
+  // 👇【追記】content="〜" の中にある、あの長い文字列（ID）だけをここに貼り付けるよ！
+  verification: {
+    google: "gA70mYAl8tnFr8aJ4CgvmX-L9bAB929PaA4S5cQPyvs",
+  },
 };
 
 async function getCategories() {
